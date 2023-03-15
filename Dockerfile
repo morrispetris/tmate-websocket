@@ -1,4 +1,5 @@
-FROM elixir:1.9-alpine AS build
+#FROM elixir:1.9-alpine AS build
+FROM alpine:latest AS build
 
 RUN mix local.hex --force && mix local.rebar --force
 RUN apk --no-cache add git
